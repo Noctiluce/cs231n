@@ -6,6 +6,17 @@ This repository contains an implementation of concepts and assignments from Stan
 
 ## Lessons
 
+---
+### Lesson 2
+#### Step 1
+
+We trained a basic SVM model on CIFAR-10 and achieved an accuracy of approximately 32.15% using the selected hyperparameters: Δ = 1.1, η = 0.01, and 5 epochs.
+By considering the top two predictions instead of only the highest-scoring class, the accuracy increases to 48.6%.
+
+
+This represents an improvement from the first lesson ~27% accuracy to ~32%, meaning that a basic SVM performs ~18.5% better than in Lesson1.
+
+---
 ### Lesson 1
 
 This lesson introduces fundamental concepts in image classification and deep learning, including:
@@ -20,6 +31,7 @@ This lesson introduces fundamental concepts in image classification and deep lea
     <img src="https://github.com/Noctiluce/cs231n/blob/master/Lesson1/L2.png" alt="Lesson 1 Visualization 2" width="45%" />
 </p>
 
+---
 ## Getting Started
 
 ### Prerequisites
