@@ -21,6 +21,12 @@ This represents an improvement from the first lesson ~27% accuracy to ~32%, mean
 
 With the Softmax approach, we achieve an accuracy of approximately 42%, which represents an improvement of around 30.6% compared to step 1.
 
+
+Weight representation:
+<p align="center">
+    <img src="/Lesson2/weight_representation.png" alt="weight_representation" width="45%" />
+</p>
+
 Here is a recap of the progress so far:
 <p align="center">
     <img src="/Lesson2/progress_lesson2.png" alt="progress_lesson2" width="45%" />
