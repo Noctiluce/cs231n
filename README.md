@@ -16,6 +16,16 @@ By considering the top two predictions instead of only the highest-scoring class
 
 This represents an improvement from the first lesson ~27% accuracy to ~32%, meaning that a basic SVM performs ~18.5% better than in Lesson1.
 
+
+#### Step2
+
+With the Softmax approach, we achieve an accuracy of approximately 42%, which represents an improvement of around 30.6% compared to step 1.
+
+Here is a recap of the progress so far:
+<p align="center">
+    <img src="/Lesson2/progress_lesson2.png" alt="progress_lesson2" width="45%" />
+</p>
+
 ---
 ### Lesson 1
 
@@ -27,8 +37,8 @@ This lesson introduces fundamental concepts in image classification and deep lea
 #### Visualizations
 
 <p align="center">
-    <img src="https://github.com/Noctiluce/cs231n/blob/master/Lesson1/L1.png" alt="Lesson 1 Visualization 1" width="45%" />
-    <img src="https://github.com/Noctiluce/cs231n/blob/master/Lesson1/L2.png" alt="Lesson 1 Visualization 2" width="45%" />
+    <img src="/Lesson1/L1.png" alt="Lesson 1 Visualization 1" width="45%" />
+    <img src="/Lesson1/L2.png" alt="Lesson 1 Visualization 2" width="45%" />
 </p>
 
 ---
