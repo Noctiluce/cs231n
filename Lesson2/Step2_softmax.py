@@ -37,6 +37,20 @@ def display_images(image, predicted_label, real_label):
     plt.show()
 
 
+def visualize_weights(W):
+    num_classes = W.shape[0]
+    fig, axes = plt.subplots(2, 5, figsize=(10, 5))
+    for i in range(num_classes):
+        weight_image = W[i].reshape(32, 32, 3)
+        min_val, max_val = weight_image.min(), weight_image.max()
+        weight_image = (weight_image - min_val) / (max_val - min_val)
+        ax = axes[i // 5, i % 5]
+        ax.imshow(weight_image)
+        ax.axis('off')
+        ax.set_title(cifar10_classes[i])
+    plt.tight_layout()
+    plt.show()
+
 if __name__ == "__main__":
     startTime = time.time()
     process_train_images = train_images / 127.5 - 1.
