@@ -8,13 +8,13 @@ import os
 POINT_PER_CLASS = 100
 DIMENSION = 2 # better to not touch this one
 NUMBER_OF_CLASSES = 3
-SPIRAL_SHAPE = False
+SPIRAL_SHAPE = True
 SHOW_PROGRESS_AREAS = True
-SHOW_PROGRESS_GRAPHIS = True
+SHOW_PROGRESS_GRAPHIS = False
 HIDDEN_LAYER_SIZE = 100
-EPOCHS = 50000
+EPOCHS = 3000
 LEARNING_RATE = 0.5
-HIDDEN_LAYER_COUNT = 3
+HIDDEN_LAYER_COUNT = 0 # there is 1 layer by default even when this is 0
 #____________________________________
 
 class Layer:
@@ -81,25 +81,21 @@ def backward(X, labels, activations, probs, i_layers):
     num_examples = labels.shape[0]
     num_layers = len(i_layers)
 
-    # Initialiser liste des gradients (dW, db)
     gradients = []
 
-    # Softmax loss + son gradient
     delta = probs.copy()
     delta[range(num_examples), labels] -= 1
     delta /= num_examples
 
-    # Pour itérer à l'envers
     for i in reversed(range(num_layers)):
         a_prev = X if i == 0 else activations[i-1]
         W = i_layers[i].weight
 
-        # dW, db
+
         dW = a_prev.T @ delta
         db = np.sum(delta, axis=0, keepdims=True)
-        gradients.insert(0, (dW, db))  # on insère au début (ordre croissant des couches)
+        gradients.insert(0, (dW, db))
 
-        # calcul du delta précédent (si pas couche d'entrée)
         if i > 0:
             delta = delta @ W.T
             delta[activations[i-1] <= 0] = 0  # ReLU derivative
@@ -130,13 +126,6 @@ def train(i_positions, i_labels, i_layers, epochs=1000, learning_rate=1.0):
         for i, (dW, db) in enumerate(grads):
             i_layers[i].weight -= learning_rate * dW
             i_layers[i].bias -= learning_rate * db
-        #
-        # dW1, db1, dW2, db2 = backward(i_positions, i_labels, activations[0], probs, i_layers[1].weight)
-        #
-        # i_layers[0].weight  -= learning_rate * dW1
-        # i_layers[0].bias    -= learning_rate * db1
-        # i_layers[1].weight  -= learning_rate * dW2
-        # i_layers[1].bias    -= learning_rate * db2
 
         if SHOW_PROGRESS_AREAS and epoch % 100 == 0:
             plotAreas(i_positions, i_labels, i_layers, epoch)
@@ -169,6 +158,7 @@ def plotAreas(i_position, i_label, i_layers, i_epoch):
     plt.savefig(f"areas/a_e{i_epoch}.png")
     plt.show()
 
+# Plot data
 def plotData(data):
     x_vals = [p[0] for p in data]
     y_vals = [p[1] for p in data]

@@ -13,20 +13,17 @@ Area Classification
 
 With 1 hidden layer :
 <p align="center">
-    <img src="/Lesson5/Readme_Images/1Layer_2000Epoch_Areas.gif" alt="1Layer_2000Epoch_Areas.gif" width="45%" />
-    <img src="/Lesson5/Readme_Images/1Layer_2000Epoch_Graphs.gif" alt="1Layer_2000Epoch_Graphs.gif" width="45%" />
+    <img src="/Lesson5/Readme_Images/1Layer_2000Epoch_Combine.gif" alt="1Layer_2000Epoch_Combine.gif" width="95%" />
 </p>
 
 With 2 hidden layer :
 <p align="center">
-    <img src="/Lesson5/Readme_Images/2Layer_5000Epoch_Areas.gif" alt="2Layer_5000Epoch_Areas.gif" width="45%" />
-    <img src="/Lesson5/Readme_Images/2Layer_5000Epoch_Graphs.gif" alt="2Layer_5000Epoch_Graphs.gif" width="45%" />
+    <img src="/Lesson5/Readme_Images/2Layer_5000Epoch_Combine.gif" alt="2Layer_5000Epoch_Combine.gif" width="95%" />
 </p>
 
 With 4 hidden layer :
 <p align="center">
-    <img src="/Lesson5/Readme_Images/3Layer_12000Epoch_Areas.gif" alt="3Layer_12000Epoch_Areas.gif" width="45%" />
-    <img src="/Lesson5/Readme_Images/3Layer_12000Epoch_Graphs.gif" alt="3Layer_12000Epoch_Graphs.gif" width="45%" />
+    <img src="/Lesson5/Readme_Images/3Layer_4000Epoch_Combine.gif" alt="3Layer_4000Epoch_Combine.gif" width="95%" />
 </p>
 
 ---
